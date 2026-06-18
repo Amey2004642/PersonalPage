@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amey Lole — Founder &amp; Director | Tech With Amey</title>
+<meta name="description" content="Amey Lole is the Founder & Director of Tech With Amey, mentoring 10,000+ learners across 30+ countries through skill-based coding programs and a live internship.">
+<meta name="theme-color" content="#0E1626">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230E1626'/%3E%3Ctext x='32' y='41' font-family='monospace' font-size='24' font-weight='700' fill='%23C6862E' text-anchor='middle'%3E%3C/%3E%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+  :root{
+    --ink:#0E1626;
+    --ink-soft:#16213A;
+    --line-dark:#28344C;
+    --paper:#F3F5F8;
+    --panel-grey:#EAEDF2;
+    --panel:#FFFFFF;
+    --line:#DCE3EC;
+    --text-soft:#5B6779;
+    --paper-soft:#A9B4C6;
+    --brass:#B97D24;
+    --brass-soft:#E9C385;
+    --cobalt:#2454D6;
+    --cobalt-deep:#173B9E;
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Inter', sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.65;
+    overflow-x:hidden;
+  }
+
+  a{color:inherit;text-decoration:none;}
+  h1,h2,h3{font-family:'Fraunces', serif;font-weight:600;letter-spacing:-0.01em;}
+  .mono{font-family:'JetBrains Mono', monospace;}
+
+  ::-webkit-scrollbar{width:9px;}
+  ::-webkit-scrollbar-track{background:var(--paper);}
+  ::-webkit-scrollbar-thumb{background:var(--brass);border-radius:10px;}
+  :focus-visible{outline:2.5px solid var(--brass);outline-offset:2px;border-radius:4px;}
+
+  .container{max-width:1080px;margin:0 auto;padding:0 1.75rem;}
+
+  /* ---------------- TOPBAR ---------------- */
+  .topbar{
+    background:rgba(14,22,38,0.96);border-bottom:1px solid var(--line-dark);
+    position:sticky;top:0;z-index:200;
+  }
+  .topbar-inner{
+    max-width:1080px;margin:0 auto;padding:0.95rem 1.75rem;
+    display:flex;justify-content:space-between;align-items:center;gap:1rem;
+  }
+  .back-link{color:#D7DEEA;font-size:0.9rem;display:flex;align-items:center;gap:0.5rem;transition:0.25s;}
+  .back-link:hover{color:var(--brass-soft);}
+  .topbar-brand{display:flex;align-items:center;gap:0.6rem;color:var(--paper-soft);font-size:0.82rem;}
+  .topbar-brand .mark{
+    width:26px;height:26px;border-radius:7px;background:var(--ink-soft);
+    border:1px solid var(--brass-soft);display:flex;align-items:center;justify-content:center;
+    font-size:0.7rem;color:var(--brass-soft);font-weight:700;
+  }
+
+  /* ---------------- HERO ---------------- */
+  .hero{
+    background:var(--ink);color:#fff;
+    background-image:
+      radial-gradient(circle at 88% 10%, rgba(185,125,36,0.18), transparent 45%),
+      radial-gradient(circle at 5% 95%, rgba(36,84,214,0.18), transparent 45%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 64px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 64px);
+    padding:5rem 0 4.5rem;
+  }
+  .hero-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:3rem;align-items:center;}
+
+  .eyebrow{
+    font-family:'JetBrains Mono', monospace;font-size:0.74rem;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--brass-soft);margin-bottom:1.1rem;display:inline-block;
+    border:1px solid rgba(233,195,133,0.35);padding:0.4rem 0.9rem;border-radius:30px;
+  }
+
+  .hero h1{font-size:clamp(2.3rem,5vw,3.6rem);color:#fff;line-height:1.1;margin-bottom:0.5rem;}
+  .hero .role{color:var(--brass-soft);font-size:1.05rem;font-weight:500;margin-bottom:1.3rem;}
+  .hero .role span{color:var(--paper-soft);}
+  .hero-tagline{color:#C5CCDB;font-size:1.04rem;max-width:520px;margin-bottom:1.9rem;}
+
+  .stat-row{display:grid;grid-template-columns:repeat(2,1fr);gap:0.8rem;margin-bottom:2rem;max-width:480px;}
+  .stat-chip{
+    background:rgba(255,255,255,0.05);border:1px solid var(--line-dark);
+    padding:0.7rem 1rem;border-radius:var(--radius-sm);font-size:0.85rem;
+    display:flex;flex-direction:column;gap:0.2rem;
+  }
+  .stat-chip b{font-family:'Fraunces',serif;font-size:1.25rem;color:var(--brass-soft);font-weight:600;}
+  .stat-chip span{color:var(--paper-soft);font-size:0.78rem;}
+
+  .cta-row{display:flex;gap:1rem;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--cobalt);color:#fff;padding:0.75rem 1.5rem;border-radius:var(--radius-sm);
+    font-weight:600;font-size:0.92rem;border:none;cursor:pointer;
+    display:inline-flex;align-items:center;gap:0.5rem;transition:0.25s;
+  }
+  .btn-primary:hover{background:var(--cobalt-deep);transform:translateY(-2px);}
+  .btn-ghost{
+    border:1.5px solid var(--brass);color:var(--brass-soft);background:transparent;
+    padding:0.7rem 1.4rem;border-radius:var(--radius-sm);font-weight:600;font-size:0.92rem;
+    display:inline-flex;align-items:center;gap:0.5rem;transition:0.25s;
+  }
+  .btn-ghost:hover{background:rgba(185,125,36,0.12);}
+
+  /* seal / monogram visual */
+  .seal-wrap{display:flex;justify-content:center;}
+  .seal{
+    width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, rgba(233,195,133,0.18), transparent 60%), var(--ink-soft);
+    border:2px solid var(--brass-soft);
+    display:flex;align-items:center;justify-content:center;flex-direction:column;
+    box-shadow:0 30px 60px -20px rgba(0,0,0,0.6);
+    position:relative;
+  }
+  .seal::before{
+    content:"";position:absolute;inset:14px;border:1px dashed rgba(233,195,133,0.4);border-radius:50%;
+  }
+  .seal-initials{font-family:'Fraunces',serif;font-size:3.6rem;font-weight:700;color:#fff;}
+  .seal-sub{font-family:'JetBrains Mono',monospace;font-size:0.66rem;letter-spacing:0.12em;color:var(--brass-soft);margin-top:0.4rem;text-transform:uppercase;}
+
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;text-align:center;}
+    .stat-row{margin-left:auto;margin-right:auto;}
+    .cta-row{justify-content:center;}
+    .seal-wrap{margin-top:1rem;}
+  }
+
+  /* ---------------- SECTION HEADS ---------------- */
+  section{padding:4.4rem 0;}
+  .sec-head{max-width:680px;margin:0 auto 2.6rem;}
+  .sec-eyebrow{
+    font-family:'JetBrains Mono',monospace;font-size:0.74rem;letter-spacing:0.12em;text-transform:uppercase;
+    color:var(--brass);margin-bottom:0.7rem;display:block;
+  }
+  .sec-title{font-size:clamp(1.7rem,3.2vw,2.2rem);color:var(--ink);}
+  .sec-title.on-dark{color:#fff;}
+
+  /* ---------------- BIO ---------------- */
+  .bio-text p{color:var(--text-soft);font-size:1.02rem;margin-bottom:1.1rem;max-width:760px;}
+  .bio-text p strong{color:var(--ink);}
+
+  .tag-row{display:flex;flex-wrap:wrap;gap:0.7rem;margin-top:1.8rem;}
+  .tag-chip{
+    background:var(--panel);border:1px solid var(--line);padding:0.55rem 1.1rem;border-radius:30px;
+    font-size:0.85rem;display:inline-flex;align-items:center;gap:0.5rem;font-weight:500;
+  }
+  .tag-chip i{color:var(--cobalt);}
+
+  /* ---------------- LEDGER / TIMELINE ---------------- */
+  .section-grey{background:var(--panel-grey);}
+  .ledger{max-width:760px;margin:0 auto;}
+  .ledger-item{
+    display:grid;grid-template-columns:48px 1fr;gap:1.2rem;padding:1.3rem 0;
+    border-bottom:1px dashed var(--line);
+  }
+  .ledger-item:last-child{border-bottom:none;}
+  .ledger-num{
+    font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--brass);
+    background:var(--panel);border:1px solid var(--line);width:42px;height:42px;border-radius:50%;
+    display:flex;align-items:center;justify-content:center;font-size:0.85rem;
+  }
+  .ledger-item h3{font-size:1.02rem;font-family:'Inter',sans-serif;font-weight:700;margin-bottom:0.3rem;}
+  .ledger-item p{color:var(--text-soft);font-size:0.92rem;}
+
+  /* ---------------- MESSAGE / QUOTE ---------------- */
+  .message-section{background:var(--ink);color:#fff;text-align:center;}
+  .message-section blockquote{
+    font-family:'Fraunces',serif;font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:500;
+    max-width:760px;margin:0 auto 1.4rem;line-height:1.5;color:#F4F6F9;
+  }
+  .message-section blockquote::before{content:"\201C";color:var(--brass-soft);}
+  .message-section blockquote::after{content:"\201D";color:var(--brass-soft);}
+  .message-attr{color:var(--paper-soft);font-size:0.9rem;}
+  .message-attr b{color:var(--brass-soft);}
+
+  /* ---------------- CONNECT ---------------- */
+  .connect-card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-lg);
+    padding:2.4rem;max-width:640px;margin:0 auto;text-align:center;
+  }
+  .connect-card h3{font-size:1.3rem;margin-bottom:0.6rem;}
+  .connect-card p{color:var(--text-soft);font-size:0.95rem;margin-bottom:1.6rem;}
+  .connect-lines{display:flex;flex-direction:column;gap:0.7rem;align-items:center;margin-bottom:1.6rem;}
+  .connect-line{display:flex;align-items:center;gap:0.6rem;font-size:0.95rem;}
+  .connect-line i{color:var(--brass);}
+  .connect-line a:hover{color:var(--brass);}
+  .social-row{display:flex;gap:1rem;justify-content:center;margin-bottom:1.8rem;}
+  .social-icon{
+    background:var(--panel-grey);width:42px;height:42px;border-radius:50%;
+    display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);
+    transition:0.25s;color:var(--ink);
+  }
+  .social-icon:hover{border-color:var(--brass);color:var(--brass);}
+
+  /* ---------------- FOOTER ---------------- */
+  footer{background:var(--ink);border-top:1px solid var(--line-dark);padding:2.2rem 0;text-align:center;}
+  footer p{color:var(--paper-soft);font-size:0.84rem;}
+  footer p.brand{color:#fff;font-weight:600;margin-bottom:0.3rem;font-size:0.95rem;}
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <a href="techwithamey-website.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Tech With Amey</a>
+    <div class="topbar-brand"><span class="mark">&lt;/&gt;</span> Tech With Amey</div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ---------------- HERO ---------------- -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Founder &amp; Director</span>
+        <h1>Amey Lole</h1>
+        <p class="role">Founder, Tech With Amey <span>· Gospel Grace Education</span></p>
+        <p class="hero-tagline">Full-stack developer and mentor building a skill-based path into tech for learners who can't access a traditional classroom — through live teaching, real commercial projects, and a hands-on internship.</p>
+
+        <div class="stat-row">
+          <div class="stat-chip"><b>10,000+</b><span>Learners mentored</span></div>
+          <div class="stat-chip"><b>30+</b><span>Countries reached</span></div>
+          <div class="stat-chip"><b>2+ yrs</b><span>Mentoring experience</span></div>
+          <div class="stat-chip"><b>15+</b><span>Commercial collaborations</span></div>
+        </div>
+
+        <div class="cta-row">
+          <a href="mailto:tecwithamey@gmail.com" class="btn-primary"><i class="fas fa-envelope"></i> Email Amey</a>
+          <a href="#connect" class="btn-ghost"><i class="fas fa-link"></i> Connect</a>
+        </div>
+      </div>
+
+      <div class="seal-wrap">
+        <div class="seal">
+          <span class="seal-initials">AL</span>
+          <span class="seal-sub">Founder · Director</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- BIO ---------------- -->
+  <section id="about">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">Profile</span>
+        <h2 class="sec-title">About Amey</h2>
+      </div>
+      <div class="bio-text">
+        <p><strong>Amey Lole</strong> founded Tech With Amey under the Gospel Grace Education initiative to make industry-aligned coding education accessible without the cost or rigidity of a traditional bootcamp. He works as a full-stack developer and enterprise consultant alongside running the program, which keeps the curriculum grounded in tools and patterns actually used on commercial projects rather than theory alone.</p>
+        <p>Over the past two-plus years, that approach has carried the program to more than 10,000 learners across 30-plus countries, and into more than 15 commercial collaborations with partner businesses — work that now feeds directly back into the live internship track, giving learners a path from first lesson to real client work.</p>
+      </div>
+      <div class="tag-row">
+        <span class="tag-chip"><i class="fab fa-python"></i> Python</span>
+        <span class="tag-chip"><i class="fas fa-database"></i> SQL</span>
+        <span class="tag-chip"><i class="fas fa-leaf"></i> MongoDB</span>
+        <span class="tag-chip"><i class="fab fa-java"></i> Java</span>
+        <span class="tag-chip"><i class="fab fa-node-js"></i> Node.js</span>
+        <span class="tag-chip"><i class="fab fa-react"></i> Full-Stack / React</span>
+        <span class="tag-chip"><i class="fas fa-chalkboard-user"></i> Mentorship</span>
+        <span class="tag-chip"><i class="fas fa-briefcase"></i> Enterprise Consulting</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- LEDGER ---------------- -->
+  <section class="section-grey">
+    <div class="container">
+      <div class="sec-head">
+        <span class="sec-eyebrow">Journey</span>
+        <h2 class="sec-title">Career Ledger</h2>
+      </div>
+      <div class="ledger">
+        <div class="ledger-item">
+          <span class="ledger-num mono">01</span>
+          <div><h3>Started mentoring</h3><p>Began teaching core programming fundamentals to early learners, one-on-one and in small groups.</p></div>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-num mono">02</span>
+          <div><h3>Founded Tech With Amey</h3><p>Launched the program under the Gospel Grace Education initiative to scale skill-based coding mentorship.</p></div>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-num mono">03</span>
+          <div><h3>Built commercial partnerships</h3><p>Delivered real client work with Purvak Technologies and Indrajeet Furniture, among others.</p></div>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-num mono">04</span>
+          <div><h3>Launched the live internship</h3><p>Opened a 3-month internship track so learners could apply their skills on enterprise projects.</p></div>
+        </div>
+        <div class="ledger-item">
+          <span class="ledger-num mono">05</span>
+          <div><h3>Crossed 10,000+ learners</h3><p>Grew the program to learners in 30-plus countries and 15-plus commercial collaborations.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- MESSAGE ---------------- -->
+  <section class="message-section">
+    <div class="container">
+      <blockquote>Empowered 10,000+ learners across 30+ countries, with proud collaborations including Purvak Technologies, Indrajeet Furniture and other global partners.</blockquote>
+      <p class="message-attr"><b>Amey Lole</b> — Founder &amp; Director, Tech With Amey</p>
+    </div>
+  </section>
+
+  <!-- ---------------- CONNECT ---------------- -->
+  <section id="connect">
+    <div class="container">
+      <div class="connect-card">
+        <h3>Get in touch with Amey</h3>
+        <p>For partnerships, enterprise consulting, or questions about the program.</p>
+        <div class="connect-lines">
+          <div class="connect-line"><i class="fas fa-envelope"></i> <a href="mailto:tecwithamey@gmail.com">tecwithamey@gmail.com</a></div>
+          <div class="connect-line"><i class="fas fa-headset"></i> <a href="mailto:supporttecwithamey@gmail.com">supporttecwithamey@gmail.com</a></div>
+        </div>
+        <div class="social-row">
+          <a href="#" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+        <a href="techwithamey-website.html" class="btn-primary"><i class="fas fa-arrow-left"></i> Back to Tech With Amey</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p class="brand">Tech With Amey</p>
+  <p>© 2025 Tech With Amey — Gospel Grace Education</p>
+</footer>
+
+</body>
+</html>
